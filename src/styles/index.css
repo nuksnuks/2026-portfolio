@@ -11,9 +11,11 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --bg-img: url("/skills.png");
+
+  --sans: "Special Gothic Condensed One", sans-serif;
+  --heading: "Special Gothic Condensed One", sans-serif;
+  --mono: ui-monospace, "Special Gothic Condensed One", monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -30,19 +32,25 @@
   }
 }
 
+.special-gothic-condensed-one-regular {
+  font-family: "Special Gothic Condensed One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #ffffff;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #484848;
     --border: #2e303a;
-    --code-bg: #1f2428;
+    --code-bg: #484848;
     --accent: #84bcfc;
     --accent-bg: rgba(8, 18, 32, 0.4);
     --accent-border: rgba(132, 184, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --bg-img: url("/skills_darkmode.png");
   }
 
   #social .button-icon {
@@ -55,7 +63,6 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -64,9 +71,9 @@
 
 body {
   margin: 0;
-  background-image: url('../public/images/introduktionsbaggrund.jpg');
+  background-image: var(--bg-img);
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 
 h1,
@@ -113,28 +120,8 @@ code {
   background: var(--code-bg);
 }
 
-.title-box {
-  display: inline-block;
-  padding: 16px 32px;
-  background: var(--accent-bg);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  margin: 20px 20px;
-  backdrop-filter: blur(10px);
-}
-.desc-box {
-  max-width: 600px;
-  margin: 20px 20px auto 60%;
+.text-box {
+  border-radius: 20px;
+  margin: 20px 20px 0px 50%;
   padding: 20px;
-  background: var(--accent-bg);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.desc-box p {
-  font-size: 18px;
-  line-height: 150%;
-  color: var(--text);
-  text-align: left;
 }

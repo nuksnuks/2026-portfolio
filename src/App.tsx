@@ -1,12 +1,15 @@
-import Index from "./pages/Index"
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
-  
+import HomePage from './pages/HomePage.tsx';
+import About from './pages/About.tsx';
+import Contacts from './pages/Contacts';
+
+export default function App() {
   return (
-    <>
-      <Index />
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
+    </Routes>
+  );
 }
-
-export default App
