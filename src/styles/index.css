@@ -1,9 +1,9 @@
 :root {
-  --text: #ffffff;
+  --text: #08060d;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #cecece;
   --border: #e5e4e7;
-  --code-bg: #f4f3ec;
+  --code-bg: #e1e0d9;
   --accent: #3ba0ff;
   --accent-bg: rgba(59, 177, 255, 0.9);
   --accent-border: rgba(59, 160, 255, 0.63);
@@ -11,13 +11,7 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --bg-img: url("/skills.png");
-
-  --sans: "Special Gothic Condensed One", sans-serif;
-  --heading: "Special Gothic Condensed One", sans-serif;
-  --mono: ui-monospace, "Special Gothic Condensed One", monospace;
-
-  font: 18px/145% var(--sans);
+  font: 18px/145%;
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -32,10 +26,23 @@
   }
 }
 
-.special-gothic-condensed-one-regular {
-  font-family: "Special Gothic Condensed One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+.roboto-flex-regular {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+    font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
 }
 
 
@@ -50,12 +57,24 @@
     --accent-bg: rgba(8, 18, 32, 0.4);
     --accent-border: rgba(132, 184, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --bg-img: url("/skills_darkmode.png");
+    --shadow:
+      rgba(0, 0, 0, 0.1);
   }
 
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
+
+  .text-box {
+  background-image: url("/skills_darkmode.jpg") !important;
+  }
+  .gh-text-box {
+  background-image: url("/gh_dm.jpg") !important;
+  }
+  .xp-text-box {
+  background-image: url("/dev_dm.jpg") !important;
+  }
+
 }
 
 #root {
@@ -71,57 +90,65 @@
 
 body {
   margin: 0;
-  background-image: var(--bg-img);
   background-size: cover;
   background-position: left;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
+h1, h2, h3, h4 {
+  text-align: left;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 100;;
   font-weight: 500;
   color: var(--text-h);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
 p {
   margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  text-align: left;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 100;
 }
 
 .text-box {
-  border-radius: 20px;
-  margin: 20px 20px 0px 50%;
   padding: 20px;
+  background-image: url("/skills.jpg");
+  background-size: cover;
+  background-position: left;
+  margin-top: 20px;
+  box-shadow: 10px 10px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-container img {
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.text {
+  margin: 20px 20px 20px 40%;
+  padding-left: 40px;
+}
+
+
+.gh-text-box {
+  padding: 20px;
+  background-image: url("/gh_lm.jpg");
+  background-size: cover;
+  background-position: left;
+  margin-top: 20px;
+  box-shadow: 10px 10px;
+}
+.xp-text-box {
+  padding: 20px;
+  background-image: url("/dev_lm.jpg");
+  background-size: cover;
+  background-position: left;
+  margin-top: 20px;
+  box-shadow: 10px 10px;
 }
