@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { LuPhone } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
@@ -84,7 +83,7 @@ const HomePage = () => {
               Jeg bruger typisk GitHub til CI/CD, hvor builds, tests og deployment automatiseres for at sikre hurtige og stabile releases.<br/><br/>
               Senest har jeg integreret GitHub Copilot i mit arbejde til kodeforslag, refaktorering, dokumentation og testgenerering, hvilket øger produktiviteten og effektiviserer udviklingsprocessen.<br /><br/>
               På min githubprofil kan du finde nogle af mine projekter og se kildekoderne til mine private projekter så som en projektstyringsapp, en hjemmestreamingstjeneste og kildekoden til denne portfolio hjemmeside.<br /><br/>
-              Se min GitHub profil her: <Link href="https://github.com/nuksnuks" target="_blank" rel="noopener noreferrer">github.com/nuksnuks</Link>
+              Se min GitHub profil her: <a href="https://github.com/nuksnuks" target="_blank" rel="noopener noreferrer">github.com/nuksnuks</a>
             </p>
           </div>
         </div>
