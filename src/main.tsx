@@ -8,7 +8,7 @@ import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/2026-portfolio">
 
       <App />
     </BrowserRouter>
