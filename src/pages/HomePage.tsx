@@ -1,5 +1,8 @@
 import { FaGithub } from 'react-icons/fa';
 import { LuArrowUpRight, LuArrowDown, LuCodeXml, LuDatabase, LuCloud, LuMail } from 'react-icons/lu';
+import profileImage from '/profilbillede.jpg'
+
+
 
 const skills = [
   ['Sprog', 'TypeScript', 'JavaScript', 'SQL', 'HTML5', 'CSS / SCSS'],
@@ -32,7 +35,7 @@ export default function HomePage() {
           <p className="hero-description">Jeg bygger webapplikationer, hvor solid teknik og en god brugeroplevelse går hånd i hånd. Fra den første idé til den færdige løsning.</p>
           <div className="hero-actions"><a className="button primary" href="#projekter">Se mine projekter <LuArrowDown /></a><a className="text-link" href="https://github.com/nuksnuks" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub <LuArrowUpRight /></a></div>
         </div>
-        <div className="portrait-area"><div className="portrait-frame"><img src="/profilbillede.jpg" alt="Portræt af David Wogelius" fetchPriority="high" /><span className="portrait-corner" aria-hidden="true">DW / 2026</span></div><div className="portrait-caption"><span>Fra frontend til backend.</span><span>Med blik for helheden.</span></div></div>
+        <div className="portrait-area"><div className="portrait-frame"><img src={profileImage} /><span className="portrait-corner" aria-hidden="true">DW / 2026</span></div><div className="portrait-caption"><span>Fra frontend til backend.</span><span>Med blik for helheden.</span></div></div>
       </section>
       <div className="tech-strip wrap"><span>MIT PRIMÆRE STACK</span><div>{['TypeScript', 'React', 'Node.js', 'SQL', 'Firebase', 'Docker'].map(item => <span key={item}>{item}</span>)}</div></div>
       <section id="projekter" className="section wrap">
